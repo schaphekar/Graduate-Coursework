@@ -1,4 +1,4 @@
-###### Algorithm to find the closest pair of points in a given set
+###### Recursive algorithm to find the closest pair of points in a given set
 
 ###### Importing necessary modules
 import math

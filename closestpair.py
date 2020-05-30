@@ -92,3 +92,6 @@ print()
 start_time = time.time()
 print("Minimum distance: ", closestPairRecursive(points))
 print("Divide-and-conquer approach takes " + "%s seconds" % (time.time() - start_time))
+
+
+

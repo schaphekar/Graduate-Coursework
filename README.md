@@ -17,14 +17,14 @@ The full list of coursework is given below:
 - CSC 453 Database Technologies
 - SE 450 Object-Oriented Software Development
 
-## Elective Set 1
+## Elective Set 1 - Data Science
 - DSC 424 Advanced Data Analysis
 - DSC 441 Fundamentals of Data Science
-- DSC 540 Advanced Machine Learning
-- HCI 440 Introduction to Human-Centered Design
-
-## Elective Set 2
-- CSC 480 Artificial Intelligence I
 - CSC 481 Introduction to Image Processing
 - CSC 555 Mining Big Data
+
+## Elective Set 2 - Machine Learning, AI, & Human-Computer Interaction
+- DSC 540 Advanced Machine Learning
+- CSC 480 Artificial Intelligence I
 - CSC 578 Neural Networks & Deep Learning
+- HCI 440 Introduction to Human-Centered Design

@@ -23,7 +23,7 @@ The full list of coursework is given below:
 - CSC 481 Introduction to Image Processing
 - CSC 555 Mining Big Data
 
-## Elective Set 2 - Machine Learning, AI, & Human-Computer Interaction
+## Elective Set 2 - Machine Learning, Artificial Intelligence, & Human-Computer Interaction
 - DSC 540 Advanced Machine Learning
 - CSC 480 Artificial Intelligence I
 - CSC 578 Neural Networks & Deep Learning

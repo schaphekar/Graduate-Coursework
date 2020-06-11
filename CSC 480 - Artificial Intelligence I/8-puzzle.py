@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb 13 18:32:05 2019
-
-@author: Siddharth
+@author: Siddharth Chaphekar
 """
 
 ### Importing necessary modules

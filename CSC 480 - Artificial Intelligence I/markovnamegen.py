@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar 8 18:21:19 2019
-
-@author: Siddharth
+@author: Siddharth Chaphekar
 """
 ### This is a 2nd order Markov model that generates novel baby names
 ### Novel names are derived from existing popular names using probabilities derived from 1000 word dataset each for male/female names

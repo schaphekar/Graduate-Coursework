@@ -5,10 +5,10 @@
 //	$ gcc stringLangClient.c -o stringLangClient
 
 // Define header files
-#include	"clientServer.h"
+#include "clientServer.h"
 
 // Define constants
-#define	DEFAULT_HOSTNAME	"localhost"
+#define	DEFAULT_HOSTNAME "localhost"
 
 // User input for server name and port
 void	obtainUrlAndPort	(int urlLen, char* url, int* portPtr)

@@ -3,6 +3,10 @@
 """
 Created on Wed Feb 13 18:32:05 2019
 @author: Siddharth Chaphekar
+
+This program implements an agent that takes an initial state of the 8 puzzle and returns a solution path to the goal state.
+The search strategy implemented is a simple breadth-first search (BFS). 
+
 """
 
 ### Importing necessary modules

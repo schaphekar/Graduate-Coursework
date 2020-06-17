@@ -1,3 +1,5 @@
+// Defining the configuration settings for HDFS system files:
+
 content for hadoop-2.6.4/etc/hadoop/core-site.xml
 
 <property>

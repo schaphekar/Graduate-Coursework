@@ -3,10 +3,11 @@
 """
 Created on Fri Mar 8 18:21:19 2019
 @author: Siddharth Chaphekar
-"""
-### This is a 2nd order Markov model that generates novel baby names
-### Novel names are derived from existing popular names using probabilities derived from 1000 word dataset each for male/female names
 
+This is a 2nd order Markov model that generates novel baby names by building words letter by letter.
+The probabilities of the letter selection are derived from a dataset containing 1000 male and 1000 female names.
+
+"""
 #######################################################################################################
 
 ### Importing necessary modules

@@ -1,6 +1,6 @@
-// Defining the configuration settings for HDFS system files:
+Defining the configuration settings for HDFS system files:
 
-content for hadoop-2.6.4/etc/hadoop/core-site.xml
+Content for hadoop-2.6.4/etc/hadoop/core-site.xml
 
 <property>
   <name>fs.defaultFS</name>
@@ -8,7 +8,7 @@ content for hadoop-2.6.4/etc/hadoop/core-site.xml
 </property>
 
 
-content for hadoop-2.6.4/etc/hadoop/hdfs-site.xml
+Content for hadoop-2.6.4/etc/hadoop/hdfs-site.xml
 
 <property>
  <name>dfs.replication</name>
@@ -16,7 +16,7 @@ content for hadoop-2.6.4/etc/hadoop/hdfs-site.xml
 </property>
 
 
-content for hadoop-2.6.4/etc/hadoop/mapred-site.xml
+Content for hadoop-2.6.4/etc/hadoop/mapred-site.xml
 
 <property>
 <name>mapreduce.framework.name</name>
@@ -24,7 +24,7 @@ content for hadoop-2.6.4/etc/hadoop/mapred-site.xml
 </property>
 
 
-content for hadoop-2.6.4/etc/hadoop/yarn-site.xml
+Content for hadoop-2.6.4/etc/hadoop/yarn-site.xml
 
 <property>
   <name>yarn.resourcemanager.hostname</name>

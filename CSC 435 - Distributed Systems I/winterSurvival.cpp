@@ -1,4 +1,4 @@
-// This C++ program that exercises knowledge of POSIX threads and linked list manipulation.
+// This C++ program exercises knowledge of POSIX threads and linked list manipulation.
 // Compile with: g++ winterSurvival.cpp
 
 // Header files 

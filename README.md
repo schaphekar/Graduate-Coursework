@@ -24,7 +24,7 @@ The full list of coursework is given below:
 - CSC 555 Mining Big Data
 
 ## Elective Set 2 - Machine Learning & Artificial Intelligence
-- HCI 440 - Introduction to User-Centered Design
+- DSC 465 Data Visualization
 - DSC 540 Advanced Machine Learning
 - CSC 480 Artificial Intelligence I
 - CSC 578 Neural Networks & Deep Learning

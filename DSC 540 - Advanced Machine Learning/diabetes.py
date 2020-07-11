@@ -82,7 +82,7 @@ if lv_filter==1:
     print('--LOW VARIANCE FILTER ON--', '\n')
     
     # LV Threshold
-    sel = VarianceThreshold(threshold=0.5)                                          #Removes any feature with less than 20% variance
+    sel = VarianceThreshold(threshold=0.5)                                          # Removes any feature with less than 20% variance
     fit_mod=sel.fit(data_np)
     fitted=sel.transform(data_np)
     sel_idx=fit_mod.get_support()
@@ -92,10 +92,10 @@ if lv_filter==1:
     temp_idx=[]
     temp_del=[]
     for i in range(len(data_np[0])):
-        if sel_idx[i]==1:                                                           #Selected Features get added to temp header
+        if sel_idx[i]==1:                                                           # Selected Features get added to temp header
             temp.append(header[i+feat_start])
             temp_idx.append(i)
-        else:                                                                       #Indexes of non-selected features get added to delete array
+        else:                                                                       # Indexes of non-selected features get added to delete array
             temp_del.append(i)
 
     print('Selected:', temp)
@@ -133,10 +133,10 @@ if feat_select==1:
     temp_idx=[]
     temp_del=[]
     for i in range(len(data_np[0])):
-        if sel_idx[i]==1:                                                           #Selected Features get added to temp header
+        if sel_idx[i]==1:                                                # Selected Features get added to temp header
             temp.append(header[i+feat_start])
             temp_idx.append(i)
-        else:                                                                       #Indexes of non-selected features get added to delete array
+        else:                                                            # Indexes of non-selected features get added to delete array
             temp_del.append(i)
     print('Selected:', temp)
     print('Features (total/selected):', len(data_np[0]), len(temp))
@@ -179,7 +179,7 @@ if binning==0 and cross_val==1:
     rgr = DecisionTreeRegressor(criterion='mse', splitter='best', max_depth=None, min_samples_split=3, min_samples_leaf=1, max_features=None, random_state=rand_st)
     scores = cross_validate(rgr, data_np, target_np, scoring=scorers, cv=5)
 
-    scores_RMSE = np.asarray([math.sqrt(-x) for x in scores['test_Neg_MSE']])                                                                     #Turns negative MSE scores into RMSE
+    scores_RMSE = np.asarray([math.sqrt(-x) for x in scores['test_Neg_MSE']])                # Turns negative MSE scores into RMSE
     scores_Expl_Var = scores['test_expl_var']
     print("Decision Tree RMSE:: %0.2f (+/- %0.2f)" % ((scores_RMSE.mean()), (scores_RMSE.std() * 2)))
     print("Decision Tree Expl Var: %0.2f (+/- %0.2f)" % ((scores_Expl_Var.mean()), (scores_Expl_Var.std() * 2)))
@@ -195,7 +195,7 @@ if cross_val==0:
     scores_ACC = clf.score(data_test, target_test)                                                                                                                          
     print('Random Forest Acc:', scores_ACC)
     scores_AUC = metrics.roc_auc_score(target_test, clf.predict_proba(data_test)[:,1])                                                                                      
-    print('Random Forest AUC:', scores_AUC)                                                                     #AUC only works with binary classes, not multiclass            
+    print('Random Forest AUC:', scores_AUC)                                                       # AUC only works with binary classes, not multiclass            
  
 ### Cross-Val Classifiers
 if cross_val==1:
@@ -210,7 +210,7 @@ if cross_val==1:
 
     scores_Acc = scores['test_Accuracy']                                                                                                                                    
     print("Random Forest Acc: %0.2f (+/- %0.2f)" % (scores_Acc.mean(), scores_Acc.std() * 2))                                                                                                    
-    scores_AUC= scores['test_roc_auc']                                                                     #Only works with binary classes, not multiclass                  
+    scores_AUC= scores['test_roc_auc']                                                                     # Only works with binary classes, not multiclass                  
     print("Random Forest AUC: %0.2f (+/- %0.2f)" % (scores_AUC.mean(), scores_AUC.std() * 2))                           
     print("CV Runtime:", time.time()-start_ts)
     
@@ -227,7 +227,7 @@ if binning==1 and cross_val==1:
 
     scores_Acc = scores['test_Accuracy']                                                                                                                                    
     print("Gradient Boosting Accuracy: %0.2f (+/- %0.2f)" % (scores_Acc.mean(), scores_Acc.std() * 2))                                                                                                    
-    scores_AUC= scores['test_roc_auc']                                                                     #Only works with binary classes, not multiclass                  
+    scores_AUC= scores['test_roc_auc']                                                                     # Only works with binary classes, not multiclass                  
     print("Gradient Boosting Accuracy AUC: %0.2f (+/- %0.2f)" % (scores_AUC.mean(), scores_AUC.std() * 2))                           
     print("CV Runtime:", time.time()-start_ts)
 
@@ -239,7 +239,7 @@ if binning==1 and cross_val==1:
 
     scores_Acc = scores['test_Accuracy']                                                                                                                                    
     print("AdaBoost Acc: %0.2f (+/- %0.2f)" % (scores_Acc.mean(), scores_Acc.std() * 2))                                                                                                    
-    scores_AUC= scores['test_roc_auc']                                                                     #Only works with binary classes, not multiclass                  
+    scores_AUC= scores['test_roc_auc']                                                                     # Only works with binary classes, not multiclass                  
     print("AdaBoost AUC: %0.2f (+/- %0.2f)" % (scores_AUC.mean(), scores_AUC.std() * 2))                           
     print("CV Runtime:", time.time()-start_ts)
 
@@ -251,6 +251,6 @@ if binning==1 and cross_val==1:
 
     scores_Acc = scores['test_Accuracy']                                                                                                                                    
     print("Neural Network Accuracy: %0.2f (+/- %0.2f)" % (scores_Acc.mean(), scores_Acc.std() * 2))                                                                                                    
-    scores_AUC= scores['test_roc_auc']                                                                     #Only works with binary classes, not multiclass                  
+    scores_AUC= scores['test_roc_auc']                                                                     # Only works with binary classes, not multiclass                  
     print("Neural Network AUC: %0.2f (+/- %0.2f)" % (scores_AUC.mean(), scores_AUC.std() * 2))                           
     print("CV Runtime:", time.time()-start_ts)

@@ -1,9 +1,7 @@
-### The mergesort algorithm sorts an array by dividing the unsorted list into n sublists
-### Each contains one element - a list of one element is considered sorted
-### Then repeatedly merge sublists to produce new sorted sublists 
-### Continue until there is only one, sorted sublist remaining.
+### The mergesort algorithm sorts an array by dividing the unsorted list into n sublists, and each contains one element
+### Then repeatedly merge sublists to produce new sorted sublists, continuing until there is only one, sorted sublist remaining.
 
-### "Stable" sort, so elements maintain original positions wrt to each other.
+### This is a "stable" sort, so elements maintain original positions wrt to each other.
 
 ### Time Complexity: O(n log n)
 

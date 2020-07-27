@@ -1,21 +1,21 @@
-###### Recursive algorithm to find the closest pair of points in a given set
+### Recursive algorithm to find the closest pair of points in a given set of points.
 
-###### Importing necessary modules
+### Importing necessary modules
 import math
 import time
     
-###### Importing set of points from .txt file
+### Importing set of points from .txt file
 with open("1000points.txt") as pointsFile:
     lines = [line.split() for line in pointsFile]
 
-###### Convert all elements in lines from str to int using list comprehension
+### Convert all elements in lines from str to int using list comprehension
 points = [list(map(int, i)) for i in lines]
 
-###### Define function for calculating Euclidean distance
+### Define function for calculating Euclidean distance
 def dist(p1, p2):
     return math.sqrt((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2)
 
-###### Define function for brute-force calculation of closest pair
+### Define function for brute-force calculation of closest pair
 def closestPairBrute(points):
     
     # Initialize tracking variable for # of points
@@ -36,7 +36,7 @@ def closestPairBrute(points):
                 
     return minimum
 
-####### Define function for recursive computation of closest pair
+### Define function for recursive computation of closest pair
 def closestPairRecursive(points):
     
     # Initialize a variable for array length to avoid excessive recomputing
@@ -82,7 +82,7 @@ def closestPairRecursive(points):
     else:
         return minimum
 
-####### Test brute force and recursive functions run times
+### Test brute force and recursive functions run times
 start_time = time.time()
 print("Minimum distance: ", closestPairBrute(points))
 print("Brute-force approach takes " + "%s seconds" % (time.time() - start_time))
@@ -92,6 +92,4 @@ print()
 start_time = time.time()
 print("Minimum distance: ", closestPairRecursive(points))
 print("Divide-and-conquer approach takes " + "%s seconds" % (time.time() - start_time))
-
-
 

@@ -39,7 +39,7 @@ feat_start = 1                         # Start column of features
 rand_st=1                              # Set Random State variable for randomizing splits on runs
 
 ### Load Data
-file1= csv.reader(open('WineQuality_Red.csv'), delimiter=',', quotechar='"')
+file1= csv.reader(open('redwine.csv'), delimiter=',', quotechar='"')
 
 # Read Header Line
 header=next(file1)            

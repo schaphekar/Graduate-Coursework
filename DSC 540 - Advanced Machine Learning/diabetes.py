@@ -75,7 +75,7 @@ print('\n')
 data_np=np.asarray(data)
 target_np=np.asarray(target)
 
-##### Feature Selection
+### Feature Selection
 
 ### Low Variance Filter
 if lv_filter==1:
@@ -150,7 +150,7 @@ if feat_select==1:
     data_np = np.delete(data_np, temp_del, axis=1) 
     
 
-##### Train SciKit Models
+### Train SciKit Models
 print('--ML Model Output--', '\n')
 
 ### Test/Train split
@@ -214,7 +214,7 @@ if cross_val==1:
     print("Random Forest AUC: %0.2f (+/- %0.2f)" % (scores_AUC.mean(), scores_AUC.std() * 2))                           
     print("CV Runtime:", time.time()-start_ts)
     
-#### Cross-Val Classifiers####
+### Cross-Val Classifiers
 if binning==1 and cross_val==1:
     
     # Setup Crossval classifier scorers

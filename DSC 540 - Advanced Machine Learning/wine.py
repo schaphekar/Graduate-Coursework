@@ -102,13 +102,9 @@ if binning==1:
     # Convert Target array back to correct shape
     target_np=np.ravel(target_np_bin)
 
-#############################################################################
-#
-# Feature Selection
-#
-##########################################
+### Feature Selection
 
-#Low Variance Filter
+# Low Variance Filter
 if lv_filter==1:
     print('--LOW VARIANCE FILTER ON--', '\n')
     
@@ -139,8 +135,6 @@ if lv_filter==1:
         header.append(field)
     data_np = np.delete(data_np, temp_del, axis=1)                                 # Deletes non-selected features by index
 
-
-#Feature Selection
 if feat_select==1:
     '''Three steps:
        1) Run Feature Selection

@@ -1,5 +1,5 @@
 ### This program defines a function that takes in two arguments, a string and a list of integers.
-### It returns the index of the closest matching letter with regard to the querying index.
+### It returns the index of the closest matching letter with regard to the querying index, or returns -1 if there are no matches.
 
 # Sample string to be queried
 s = 'lshclspplsl'

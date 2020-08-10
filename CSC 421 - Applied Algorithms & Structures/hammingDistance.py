@@ -5,7 +5,7 @@
 print("Input two integers: ")
 x, y = map(int, input().split())
 
-# Convert binary, then to string
+# Convert to binary, then to string
 x = str(bin(x))
 y = str(bin(y))
 

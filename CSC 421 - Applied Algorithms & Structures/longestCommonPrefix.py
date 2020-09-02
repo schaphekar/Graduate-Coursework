@@ -3,7 +3,8 @@
 # Sample inputs
 words1 = ["flower", "flour", "flame"]
 words2 = ["basket", "basking", "basketball"]
-words3 = ["animal", "antagonist", "anonymous", "mercury"]
+words3 = ["animal", "an", "anonymous"]
+words4 = ["jovial", "javelin", "zoo"]
 
 # Function definition
 def longestCommonPrefix(arr):
@@ -22,12 +23,17 @@ def longestCommonPrefix(arr):
 
 		while i < arrlen: 
 			
+			# Catch out-of-bounds indexes.
+			if j >= len(arr[i]):
+				i = arrlen
+				break
+
 			# If the letter at index j of the word is the same as the first word and the i^th word, then increment i.
 			if arr[0][j] == arr[i][j]:
 				i += 1
 
 			# If the letter at index j of the word is the same as the first word and it is also the last word, add the common letter.
-			if i == (arrlen-1):
+			if arr[0][j] == arr[i][j] and i == (arrlen-1):
 				prefix.append(arr[i][j])
 				i = 1
 				j += 1
@@ -46,5 +52,7 @@ print(longestCommonPrefix(words2))
 # ['b', 'a', 's', 'k']
 
 print(longestCommonPrefix(words3))
-# []
+# [an]
 
+print(longestCommonPrefix(words4))
+# []
